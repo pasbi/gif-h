@@ -6,7 +6,7 @@
 namespace
 {
 
-using RGB = MyLib::GifWriter::RGB;
+using RGB = GifH::GifWriter::RGB;
 
 RGB operator+(const RGB& a, const RGB& b)
 {
@@ -161,7 +161,7 @@ int pick_changed_pixels(const uint8_t* last_frame, uint8_t* frame, int num_pixel
 }  // namespace
 
 
-namespace MyLib
+namespace GifH
 {
 
 GifWriter::GifWriter(const QSize& size, int delay, QBuffer& buffer)
@@ -712,4 +712,4 @@ GifWriter::GifBitStatus::GifBitStatus()
 {
 }
 
-}  // namespace MyLib
+}  // namespace GifH

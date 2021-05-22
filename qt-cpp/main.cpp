@@ -10,7 +10,7 @@ int main()
 {
   std::vector<QImage> imgs;
   for (int i = 0; i < 2; ++i) {
-    QImage img(660, 660, MyLib::GifWriter::image_format);
+    QImage img(660, 660, GifH::GifWriter::image_format);
     QPainter painter(&img);
 
     {
@@ -46,7 +46,7 @@ int main()
   // use the new cpp-implementation
   QFile file("/tmp/test-cpp.gif");
   if (file.open(QIODevice::WriteOnly)) {
-    const auto data = MyLib::GifWriter::encode(imgs, delay, dither);
+    const auto data = GifH::GifWriter::encode(imgs, delay, dither);
     file.write(data);
   }
 
