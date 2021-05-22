@@ -10,7 +10,7 @@
 
 class QBuffer;
 
-namespace MyLib
+namespace GifH
 {
 
 class GifWriter
@@ -89,4 +89,4 @@ private:
                                  int& best_index, int& bestDiff, int treeRoot = 1);
 };
 
-}  // namespace MyLib
+}  // namespace GifH
